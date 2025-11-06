@@ -198,57 +198,7 @@
       <div class="container">
         <h2>Publications</h2>
         <div class="pub-list">
-          <article class="pub-card">
-            <div class="pub-media">
-              <img class="pub-thumb" src="images/papers/puzzle_overview.png" alt="Puzzle overview">
-            </div>
-            <div class="pub-body">
-              <h3>Puzzle: Distillation-Based NAS for Inference-Optimized LLMs</h3>
-              <p class="pub-meta">
-                <img class="venue-logo" src="images/venues/ICML-logo.svg" alt="ICML"> ICML, 2025
-              </p>
-              <p class="pub-meta"><strong>TL;DR</strong>: Puzzle accelerates LLM inference on specific hardware using blockwise local knowledge distillation and MIP, preserving quality while reducing cost.</p>
-              <div class="pub-links">
-                <a href="https://openreview.net/pdf?id=RY5MMBHRqo" target="_blank" rel="noopener">Paper</a>
-                <a href="https://www.youtube.com/watch?v=YsIv9Kr99C4" target="_blank" rel="noopener">Video</a>
-                <a href="https://github.com/NVlabs/puzzle" target="_blank" rel="noopener">Code</a>
-                <a href="#" data-toggle="#puzzle-details">Read more</a>
-              </div>
-              <div id="puzzle-details" class="pub-details" aria-expanded="false">
-                <p>
-                  Despite LLMs’ impressive results, inference cost is a bottleneck. Puzzle optimizes large-scale models for target hardware without sacrificing accuracy, achieving up to 2.17× speedups.
-                </p>
-                <p>
-                  Authors: Akhiad Bercovich, Tomer Ronen, Talor Abramovich, Nir Ailon, Nave Assaf, Mohammad Dabbah, Ido Galil, Amnon Geifman, Yonatan Geifman, Izhak Golan, Netanel Haber, Ehud Karpas, Roi Koren, Itay Levy, Pavlo Molchanov, Shahar Mor, Zach Moshe, Najeeb Nabwani, Omri Puny, Ran Rubin, Itamar Schen, Ido Shahaf, Oren Tropp, Omer Ullman Argov, Ran Zilberstein, Ran El‑Yaniv
-                </p>
-              </div>
-            </div>
-          </article>
-          <!-- Order: Puzzle, then Llama‑Nemotron, then FFN Fusion -->
-          <article class="pub-card">
-            <div class="pub-media">
-              <img class="pub-thumb" src="images/papers/llama_nemotron.jpg" alt="Llama‑Nemotron">
-            </div>
-            <div class="pub-body">
-              <h3>Llama‑Nemotron: Efficient Reasoning Models</h3>
-              <p class="pub-meta">
-                <img class="venue-logo" src="images/venues/ICML-logo.svg" alt="ICML"> ICML, 2025 — EXAIT Workshop
-              </p>
-              <p class="pub-meta"><strong>TL;DR</strong>: Open reasoning LLMs (8B/49B/253B) matching SOTA reasoning quality while improving throughput and memory; dynamic reasoning toggle for controllable compute.</p>
-              <div class="pub-links">
-                <a href="https://arxiv.org/abs/2505.00949" target="_blank" rel="noopener">Paper</a>
-                <a href="#" data-toggle="#nemotron-details">Read more</a>
-              </div>
-              <div id="nemotron-details" class="pub-details" aria-expanded="false">
-                <p>
-                  Heterogeneous reasoning models trained for both quality and efficiency: architecture search for faster inference, distillation, continued pretraining, and reasoning‑focused post‑training (SFT + large‑scale RL). The family achieves competitive reasoning with higher throughput and memory efficiency and supports switching between standard chat and reasoning modes.
-                </p>
-                <p>
-                  Authors (abridged): Akhiad Bercovich, Itay Levy, Izik Golan, Mohammad Dabbah, Ran El‑Yaniv, Omri Puny, Ido Galil, Zach Moshe, Tomer Ronen, Najeeb Nabwani, Ido Shahaf, Oren Tropp, Ehud Karpas, Ran Zilberstein, Jiaqi Zeng, Soumye Singhal, Alexander Bukharin, Yian Zhang, Tugrul Konuk, Gerald Shen, Ameya Sunil Mahabaleshwarkar, Bilal Kartal, Yoshi Suhara, Olivier Delalleau, Zijia Chen, Zhilin Wang, David Mosallanezhad, Adi Renduchintala, Haifeng Qian, Dima Rekesh, …
-                </p>
-              </div>
-            </div>
-          </article>
+          <!-- Newest first: FFN Fusion, Llama‑Nemotron, Puzzle -->
           <article class="pub-card">
             <div class="pub-media">
               <img class="pub-thumb" src="images/papers/ffn_fusion.jpg" alt="FFN Fusion">
@@ -258,17 +208,67 @@
               <p class="pub-meta">
                 <img class="venue-logo" src="images/venues/neurips_logo.png" alt="NeurIPS"> NeurIPS, 2025 (Spotlight)
               </p>
-              <p class="pub-meta"><strong>TL;DR</strong>: Fuse consecutive FFN layers into larger blocks to reduce sequential depth and accelerate inference with minimal accuracy impact.</p>
+              <p class="pub-meta"><strong>TL;DR</strong>: FFN Fusion fuses consecutive FFN layers into larger blocks, reducing sequential depth and accelerating inference with minimal accuracy impact.</p>
               <div class="pub-links">
                 <a href="https://arxiv.org/pdf/2503.18908v1" target="_blank" rel="noopener">Paper</a>
                 <a href="#" data-toggle="#ffn-details">Read more</a>
               </div>
               <div id="ffn-details" class="pub-details" aria-expanded="false">
                 <p>
-                  Puzzle discovers hardware‑aware designs; fusing FFNs decreases depth. Across tens to hundreds of billions of parameters, FFN Fusion reduces latency and cost while preserving quality, complementing quantization and pruning.
+                  We run Puzzle to search hardware‑aware designs, then fuse consecutive FFNs into larger FFNs, decreasing the model's depth. Across models from tens to hundreds of billions of parameters, FFN Fusion reduces latency and cost while preserving quality, and complements techniques such as quantization and pruning.
                 </p>
                 <p>
-                  Authors: Akhiad Bercovich, Mohammad Dabbah, Omri Puny, Ido Galil, Amnon Geifman, Yonatan Geifman, Izhak Golan, Ehud Karpas, Itay Levy, Zach Moshe, Najeeb Nabwani, Tomer Ronen, Itamar Schen, Elad Segal, Ido Shahaf, Oren Tropp, Ran Zilberstein, Ran El‑Yaniv
+                  Authors: Akhiad Bercovich · Mohammad Dabbah · Omri Puny · Ido Galil · Amnon Geifman · Yonatan Geifman · Izhak Golan · Ehud Karpas · Itay Levy · Zach Moshe · Najeeb Nabwani · Tomer Ronen · Itamar Schen · Elad Segal · Ido Shahaf · Oren Tropp · Ran Zilberstein · Ran El-Yaniv
+                </p>
+              </div>
+            </div>
+          </article>
+          <article class="pub-card">
+            <div class="pub-media">
+              <img class="pub-thumb" src="images/papers/llama_nemotron.jpg" alt="Llama-Nemotron">
+            </div>
+            <div class="pub-body">
+              <h3>Llama-Nemotron: Efficient Reasoning Models</h3>
+              <p class="pub-meta">
+                <img class="venue-logo" src="images/venues/ICML-logo.svg" alt="ICML"> ICML, 2025 - EXAIT Workshop
+              </p>
+              <p class="pub-meta"><strong>TL;DR</strong>: Llama‑Nemotron is a family of open reasoning LLMs (8B/49B/253B) that match state‑of‑the‑art reasoning quality while significantly improving inference throughput and memory efficiency, and include a dynamic reasoning toggle for controllable compute.</p>
+              <div class="pub-links">
+                <a href="https://arxiv.org/abs/2505.00949" target="_blank" rel="noopener">Paper</a>
+                <a href="#" data-toggle="#nemotron-details">Read more</a>
+              </div>
+              <div id="nemotron-details" class="pub-details" aria-expanded="false">
+                <p>
+                  Llama‑Nemotron introduces heterogeneous reasoning models trained for both quality and efficiency. The recipe combines architecture search from Llama‑3 for faster inference, knowledge distillation and continued pretraining, followed by a reasoning‑focused post‑training stage (supervised fine‑tuning and large‑scale RL). The family (Nano 8B, Super 49B, Ultra 253B) achieves competitive reasoning vs. leading systems while improving throughput and memory use, and supports switching between standard chat and reasoning modes at inference time. The release includes models, a post‑training dataset, and training codebases (<a href="https://github.com/NVIDIA/NeMo" target="_blank" rel="noopener">NeMo</a>, <a href="https://github.com/NVIDIA/NeMo-Aligner" target="_blank" rel="noopener">NeMo‑Aligner</a>, <a href="https://github.com/NVIDIA/Megatron-LM" target="_blank" rel="noopener">Megatron‑LM</a>).
+                </p>
+                <p>
+                  Authors: Akhiad Bercovich · Itay Levy · Izik Golan · Mohammad Dabbah · Ran El-Yaniv · Omri Puny · Ido Galil · Zach Moshe · Tomer Ronen · Najeeb Nabwani · Ido Shahaf · Oren Tropp · Ehud Karpas · Ran Zilberstein · Jiaqi Zeng · Soumye Singhal · Alexander Bukharin · Yian Zhang · Tugrul Konuk · Gerald Shen · Ameya Sunil Mahabaleshwarkar · Bilal Kartal · Yoshi Suhara · Olivier Delalleau · Zijia Chen · Zhilin Wang · David Mosallanezhad · Adi Renduchintala · Haifeng Qian · Dima Rekesh · Fei Jia · Somshubra Majumdar · Vahid Noroozi · Wasi Uddin Ahmad · Sean Narenthiran · Aleksander Ficek · Mehrzad Samadi · Jocelyn Huang · Siddhartha Jain · Igor Gitman · Ivan Moshkov · Wei Du · Shubham Toshniwal · George Armstrong · Branislav Kisacanin · Matvei Novikov · Daria Gitman · Evelina Bakhturina · Prasoon Varshney · Makesh Narsimhan · Jane Polak Scowcroft · John Kamalu · Dan Su · Kezhi Kong · Markus Kliegl · Rabeeh Karimi Mahabadi · Ying Lin · Sanjeev Satheesh · Jupinder Parmar · Pritam Gundecha · Brandon Norick · Joseph Jennings · Shrimai Prabhumoye · Syeda Nahida Akter · Mostofa Patwary · Abhinav Khattar · Deepak Narayanan · Roger Waleffe · Jimmy Zhang · Bor-Yiing Su · Guyue Huang · Terry Kong · Parth Chadha · Sahil Jain · Christine Harvey · Elad Segal · Jining Huang · Sergey Kashirsky · Robert McQueen · Izzy Putterman · George Lam · Arun Venkatesan · Sherry Wu · Vinh Nguyen · Manoj Kilaru · Andrew Wang · Anna Warno · Abhilash Somasamudramath · Sandip Bhaskar · Maka Dong · Nave Assaf · Shahar Mor · Omer Ullman Argov · Scot Junkin · Oleksandr Romanenko · Pedro Larroy · Monika Katariya · Marco Rovinelli · Viji Balas · Nicholas Edelman · Anahita Bhiwandiwalla · Muthu Subramaniam · Smita Ithape · Karthik Ramamoorthy · Yuting Wu · Suguna Varshini Velury · Omri Almog · Joyjit Daw · Denys Fridman · Erick Galinkin · Michael Evans · Shaona Ghosh · Katherine Luna · Leon Derczynski · Nikki Pope · Eileen Long · Seth Schneider · Guillermo Siman · Tomasz Grzegorzek · Pablo Ribalta · Monika Katariya · Chris Alexiuk · Joey Conway · Trisha Saar · Ann Guan · Krzysztof Pawelec · Shyamala Prayaga · Oleksii Kuchaiev · Boris Ginsburg · Oluwatobi Olabiyi · Kari Briski · Jonathan Cohen · Bryan Catanzaro · Jonah Alben · Yonatan Geifman · Eric Chung
+                </p>
+              </div>
+            </div>
+          </article>
+          <article class="pub-card">
+            <div class="pub-media">
+              <img class="pub-thumb" src="images/papers/puzzle_overview.png" alt="Puzzle overview">
+            </div>
+            <div class="pub-body">
+              <h3>Puzzle: Distillation-Based NAS for Inference-Optimized LLMs</h3>
+              <p class="pub-meta">
+                <img class="venue-logo" src="images/venues/ICML-logo.svg" alt="ICML"> ICML, 2025
+              </p>
+              <p class="pub-meta"><strong>TL;DR</strong>: Puzzle accelerates LLM inference on specific hardware by leveraging blockwise local knowledge distillation and mixed-integer programming to preserve model performance while significantly reducing inference costs.</p>
+              <div class="pub-links">
+                <a href="https://openreview.net/pdf?id=RY5MMBHRqo" target="_blank" rel="noopener">Paper</a>
+                <a href="https://www.youtube.com/watch?v=YsIv9Kr99C4" target="_blank" rel="noopener">Video</a>
+                <a href="https://github.com/NVlabs/puzzle" target="_blank" rel="noopener">Code</a>
+                <a href="#" data-toggle="#puzzle-details">Read more</a>
+              </div>
+              <div id="puzzle-details" class="pub-details" aria-expanded="false">
+                <p>
+                  Despite LLMs’ impressive results, they are often limited by computational costs during inference. Puzzle addresses this by optimizing large-scale models for specific hardware without sacrificing accuracy, resulting in up to 2.17× speedups.
+                </p>
+                <p>
+                  Authors: Akhiad Bercovich · Tomer Ronen · Talor Abramovich · Nir Ailon · Nave Assaf · Mohammad Dabbah · Ido Galil · Amnon Geifman · Yonatan Geifman · Izhak Golan · Netanel Haber · Ehud Karpas · Roi Koren · Itay Levy · Pavlo Molchanov · Shahar Mor · Zach Moshe · Najeeb Nabwani · Omri Puny · Ran Rubin · Itamar Schen · Ido Shahaf · Oren Tropp · Omer Ullman Argov · Ran Zilberstein · Ran El-Yaniv
                 </p>
               </div>
             </div>
