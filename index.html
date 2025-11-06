@@ -31,7 +31,7 @@
             Founded in 2020 within Deci AI (acquired by NVIDIA in 2024), we operate as part of the Deci group, led by Dr. Yonatan Geifman.
           </p>
           <p class="lead">
-            We focus on advancing the inference efficiency of deep neural networks. Our mission is to reduce latency and increase throughput using Neural Architecture Search (NAS), enabling more cost‑effective deployment of state‑of‑the‑art models.
+            Our mission is to improve the inference efficiency of deep neural networks. We leverage Neural Architecture Search (NAS) to reduce latency and increase throughput, enabling more cost‑effective deployment of state‑of‑the‑art models.
           </p>
         </div>
         <div class="hero-visual">
@@ -200,12 +200,12 @@
         <div class="pub-list">
           <article class="pub-card">
             <div class="pub-media">
-              <img src="images/papers/puzzle_overview.png" alt="Puzzle overview" style="width:56px;height:56px;object-fit:cover;border-radius:8px;">
+              <img class="pub-thumb" src="images/papers/puzzle_overview.png" alt="Puzzle overview">
             </div>
             <div class="pub-body">
               <h3>Puzzle: Distillation-Based NAS for Inference-Optimized LLMs</h3>
               <p class="pub-meta">
-                <img src="images/venues/ICML-logo.svg" alt="ICML" style="height:18px;vertical-align:middle;margin-right:6px;"> ICML, 2025
+                <img class="venue-logo" src="images/venues/ICML-logo.svg" alt="ICML"> ICML, 2025
               </p>
               <p class="pub-meta"><strong>TL;DR</strong>: Puzzle accelerates LLM inference on specific hardware using blockwise local knowledge distillation and MIP, preserving quality while reducing cost.</p>
               <div class="pub-links">
@@ -224,38 +224,15 @@
               </div>
             </div>
           </article>
+          <!-- Order: Puzzle, then Llama‑Nemotron, then FFN Fusion -->
           <article class="pub-card">
             <div class="pub-media">
-              <img src="images/papers/ffn_fusion.jpg" alt="FFN Fusion" style="width:56px;height:56px;object-fit:cover;border-radius:8px;">
-            </div>
-            <div class="pub-body">
-              <h3>FFN Fusion: Rethinking Sequential Computation in Large Language Models</h3>
-              <p class="pub-meta">
-                <img src="images/venues/neurips_logo.png" alt="NeurIPS" style="height:18px;vertical-align:middle;margin-right:6px;"> NeurIPS, 2025 (Spotlight)
-              </p>
-              <p class="pub-meta"><strong>TL;DR</strong>: Fuse consecutive FFN layers into larger blocks to reduce sequential depth and accelerate inference with minimal accuracy impact.</p>
-              <div class="pub-links">
-                <a href="https://arxiv.org/pdf/2503.18908v1" target="_blank" rel="noopener">Paper</a>
-                <a href="#" data-toggle="#ffn-details">Read more</a>
-              </div>
-              <div id="ffn-details" class="pub-details" aria-expanded="false">
-                <p>
-                  Puzzle discovers hardware‑aware designs; fusing FFNs decreases depth. Across tens to hundreds of billions of parameters, FFN Fusion reduces latency and cost while preserving quality, complementing quantization and pruning.
-                </p>
-                <p>
-                  Authors: Akhiad Bercovich, Mohammad Dabbah, Omri Puny, Ido Galil, Amnon Geifman, Yonatan Geifman, Izhak Golan, Ehud Karpas, Itay Levy, Zach Moshe, Najeeb Nabwani, Tomer Ronen, Itamar Schen, Elad Segal, Ido Shahaf, Oren Tropp, Ran Zilberstein, Ran El‑Yaniv
-                </p>
-              </div>
-            </div>
-          </article>
-          <article class="pub-card">
-            <div class="pub-media">
-              <img src="images/papers/llama_nemotron.jpg" alt="Llama‑Nemotron" style="width:56px;height:56px;object-fit:cover;border-radius:8px;">
+              <img class="pub-thumb" src="images/papers/llama_nemotron.jpg" alt="Llama‑Nemotron">
             </div>
             <div class="pub-body">
               <h3>Llama‑Nemotron: Efficient Reasoning Models</h3>
               <p class="pub-meta">
-                <img src="images/venues/ICML-logo.svg" alt="ICML" style="height:18px;vertical-align:middle;margin-right:6px;"> ICML, 2025 — EXAIT Workshop
+                <img class="venue-logo" src="images/venues/ICML-logo.svg" alt="ICML"> ICML, 2025 — EXAIT Workshop
               </p>
               <p class="pub-meta"><strong>TL;DR</strong>: Open reasoning LLMs (8B/49B/253B) matching SOTA reasoning quality while improving throughput and memory; dynamic reasoning toggle for controllable compute.</p>
               <div class="pub-links">
@@ -268,6 +245,30 @@
                 </p>
                 <p>
                   Authors (abridged): Akhiad Bercovich, Itay Levy, Izik Golan, Mohammad Dabbah, Ran El‑Yaniv, Omri Puny, Ido Galil, Zach Moshe, Tomer Ronen, Najeeb Nabwani, Ido Shahaf, Oren Tropp, Ehud Karpas, Ran Zilberstein, Jiaqi Zeng, Soumye Singhal, Alexander Bukharin, Yian Zhang, Tugrul Konuk, Gerald Shen, Ameya Sunil Mahabaleshwarkar, Bilal Kartal, Yoshi Suhara, Olivier Delalleau, Zijia Chen, Zhilin Wang, David Mosallanezhad, Adi Renduchintala, Haifeng Qian, Dima Rekesh, …
+                </p>
+              </div>
+            </div>
+          </article>
+          <article class="pub-card">
+            <div class="pub-media">
+              <img class="pub-thumb" src="images/papers/ffn_fusion.jpg" alt="FFN Fusion">
+            </div>
+            <div class="pub-body">
+              <h3>FFN Fusion: Rethinking Sequential Computation in Large Language Models</h3>
+              <p class="pub-meta">
+                <img class="venue-logo" src="images/venues/neurips_logo.png" alt="NeurIPS"> NeurIPS, 2025 (Spotlight)
+              </p>
+              <p class="pub-meta"><strong>TL;DR</strong>: Fuse consecutive FFN layers into larger blocks to reduce sequential depth and accelerate inference with minimal accuracy impact.</p>
+              <div class="pub-links">
+                <a href="https://arxiv.org/pdf/2503.18908v1" target="_blank" rel="noopener">Paper</a>
+                <a href="#" data-toggle="#ffn-details">Read more</a>
+              </div>
+              <div id="ffn-details" class="pub-details" aria-expanded="false">
+                <p>
+                  Puzzle discovers hardware‑aware designs; fusing FFNs decreases depth. Across tens to hundreds of billions of parameters, FFN Fusion reduces latency and cost while preserving quality, complementing quantization and pruning.
+                </p>
+                <p>
+                  Authors: Akhiad Bercovich, Mohammad Dabbah, Omri Puny, Ido Galil, Amnon Geifman, Yonatan Geifman, Izhak Golan, Ehud Karpas, Itay Levy, Zach Moshe, Najeeb Nabwani, Tomer Ronen, Itamar Schen, Elad Segal, Ido Shahaf, Oren Tropp, Ran Zilberstein, Ran El‑Yaniv
                 </p>
               </div>
             </div>
